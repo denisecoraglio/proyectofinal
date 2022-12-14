@@ -20,9 +20,10 @@ from ejemplo.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("saludar/", index),
-    path("saludar_a/<nombre>", saludar_a),
+    path("saludar_a/<nombre>/", saludar_a),
     path("sumar/<int:a>/<int:b>/", sumar),
     path("buscar/", buscar),
     path("mi-familia/", monstrar_familiares),
+    path('mi-familia/buscar', BuscarFamiliar.as_view()),
     
 ]
